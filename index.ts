@@ -44,6 +44,11 @@ if (typeof request.body.clicks !== 'number'){
     response.send(responseData);
 });
 
+app.delete('/clicks/', function (request, response) {
+    clicks = 0;
+    response.sendStatus(200);
+});
+
 app.get('/', function(request, response) {
     response.send("I'm alive and super hot!");  
 });
